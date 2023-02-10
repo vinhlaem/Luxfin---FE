@@ -16,6 +16,7 @@ const queryClient = new QueryClient({
     },
   },
 });
+console.log(process.env.PUBLIC_URL_API);
 
 function App() {
   return (

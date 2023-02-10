@@ -1,11 +1,12 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: process.env.PUBLIC_URL_API,
+  baseURL: process.env.REACT_APP_PUBLIC_URL_API,
   headers: {
     "Content-Type": "application/json",
   },
 });
+
 client.interceptors.request.use(
   async (config) => {
     const token = await localStorage.getItem("secure_token");
